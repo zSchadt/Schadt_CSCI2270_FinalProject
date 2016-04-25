@@ -81,7 +81,7 @@ void Map::addTownChar(TownNode *temp) {
             diffMultiplier = 1;
             break;
         case 2:
-            temp->define->difficulty = "Normal";\
+            temp->define->difficulty = "Normal";
             diffMultiplier = 2;
             break;
         case 3:
@@ -89,7 +89,7 @@ void Map::addTownChar(TownNode *temp) {
             diffMultiplier = 3;
             break;
     }
-   
+    
     int monsterCount = rand() % 6 + 5;
     int rewardVal = rand() % 400 + 101;
 
@@ -101,6 +101,10 @@ void Map::addTownChar(TownNode *temp) {
 TownNode *Map::getStartTown() {
     
     int index = rand() % vertices.size();
+    
+    while (vertices[index]->define->difficulty != "Easy") {
+        index = rand() % vertices.size();
+    }
     
     return vertices[index];
     
