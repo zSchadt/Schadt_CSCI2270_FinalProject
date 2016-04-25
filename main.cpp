@@ -4,13 +4,66 @@
 
 using namespace std;
 
-int main(int argc, char** argv) {
-
-    //Character *User = new Character;
+int mainMenu(Character *instance) {
     
-    Map *Create = new Map;
-    Create->townGenerator();
+    string townName = (instance->getCurrentLocation())->name;
+    string decision;
     
-    return 0;
+    cout << "You are currently in " << townName << endl;
+    cout << "1. Fight" << endl;
+    cout << "2. Heal" << endl;
+    cout << "3. Store" << endl;
+    cout << "4. Travel" << endl;
+    cout << "5. Game Statistics" << endl;
+    cout << "6. Quit" << endl;
+    getline(cin, decision);
+    
+    return stoi(decision);
     
 }
+
+int main(int argc, char** argv) {
+
+    cout << "Welcome to *insert game name*!" << endl;
+    
+    //The following are all initializations
+    Character *User = new Character;
+    Map *Create = new Map;
+    Create->townGenerator();
+    User->setCurrentLocation((Create->getStartTown()));
+    User->monstLootFileRead();
+    
+    int decision;
+    while((decision = mainMenu(User)) != 6) {
+        
+        switch(decision) {
+            case 1:
+                User->fight(User->getCurrentLocation());
+                break;
+                
+            case 2:
+                break;
+                
+            case 3:
+                User->store();
+                break;
+                
+            case 4:
+                User->travel();
+                break;
+                
+            case 5:
+                User->getInfo();
+                break;
+
+            default:
+                cout << "Incorrect Input" << endl;
+                break;
+        }
+        
+    }
+    
+    
+    return 0;
+}
+

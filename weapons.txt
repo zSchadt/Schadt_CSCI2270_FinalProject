@@ -1,0 +1,12 @@
+Arming sword
+Broadsword
+Claymore
+Falchion
+Katana
+Longsword
+Rapier
+Sabre
+Shortsword
+Battle Axe
+Flail
+Maul
