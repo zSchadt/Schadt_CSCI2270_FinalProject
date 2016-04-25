@@ -40,6 +40,7 @@ struct Char {
     int strength;
     int criticalStrike = 0;
     int gold = 250;
+    bool visited = false;
     bool alive = true;
     
     Loot inventory[6];
@@ -85,9 +86,11 @@ public:
     void respawn();
     void travel();
     void getInfo();
+    void heal();
     void addLoot(Nemesis *item);
     void setCurrentLocation(TownNode *temp);
     TownNode* getCurrentLocation();
+    bool getALife();
     
     void monstLootFileRead();
     virtual ~Character();
@@ -95,6 +98,7 @@ public:
 private:
     Nemesis *generateEnemy();
     TownNode *location;
+    std::vector<TownNode *> visited;
     std::vector<std::string> Monsters;
     std::vector<std::string> Weapons; 
     Char *UserCharacter;
@@ -102,3 +106,4 @@ private:
 };
 
 #endif /* CHARACTER_H */
+

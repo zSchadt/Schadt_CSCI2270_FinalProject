@@ -24,7 +24,7 @@ int mainMenu(Character *instance) {
 
 int main(int argc, char** argv) {
 
-    cout << "Welcome to *insert game name*!" << endl;
+    cout << "Welcome to The End!" << endl;
     
     //The following are all initializations
     Character *User = new Character;
@@ -34,7 +34,7 @@ int main(int argc, char** argv) {
     User->monstLootFileRead();
     
     int decision;
-    while((decision = mainMenu(User)) != 6) {
+    while ((User->getALife()) && (decision = mainMenu(User)) != 6 ) {
         
         switch(decision) {
             case 1:
@@ -42,6 +42,7 @@ int main(int argc, char** argv) {
                 break;
                 
             case 2:
+                User->heal();
                 break;
                 
             case 3:
