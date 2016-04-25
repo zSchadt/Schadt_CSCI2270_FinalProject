@@ -49,6 +49,7 @@ public:
     void addVertex(std::string cityName);
     void addAdjVertex(TownNode *adjacent, int weight);
     
+    TownNode *getStartTown();
     void addTownChar(TownNode *temp);
     void townGenerator();
     
@@ -62,3 +63,4 @@ private:
 };
 
 #endif /* MAP_H */
+
