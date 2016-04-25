@@ -98,5 +98,14 @@ void Map::addTownChar(TownNode *temp) {
     
 }
 
+TownNode *Map::getStartTown() {
+    
+    int index = rand() % vertices.size();
+    
+    return vertices[index];
+    
+}
+
 Map::~Map() {
 }
+
