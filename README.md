@@ -1,5 +1,7 @@
 # Schadt_CSCI2270_FinalProject
 
+PASE 1 REQUIREMENT:
+
 I will make a role playing figher game. I am not yet sure of what theme I will choose, but the game will have various levels with a combat system of its own.
 I will use graphs as my data structure. Each node in the graph will be a different level with a different difficulty etc. 
 I may also implement a linked list as a way of storing certain character traits, but am not completely sure as I have not yet started the code.
@@ -27,7 +29,8 @@ This program requires three different text files to run.
 3. monsterNames.txt
 
 System Requirements:
-its c++ code, and computer with a proper compiler can rune
+its c++ code, and computer with a proper compiler can run.
+I know for a fact that the files compile and run on Linux
 
 Group Members:
 None
