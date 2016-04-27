@@ -13,6 +13,9 @@ Summary:
 My game is called "The End". It is a role-playing fighter game where the user can choose to visit, and fight in various towns. You can earn more gold by defeating enemies and clearing a town (no enemies left). The game is never the same, each time the program is run, all of the cities are assigned random locations with different connecting cites and different difficulties. All of the monsters are randomly created as well. Certain limitations were put on the creation of new monsters to keep 'in-game power' reasonable. The difficulty of a town corresponds to how many enemies are there and the reward upon completion of the level.
 
 How to Run:
+Download all of the files: "main.cpp", "Character.cpp", "Character.h", "Map.cpp", "Map.h", "monsterNames.txt", "towns.txt" amd "weapons.txt". These files can be opened on your IDE (provided c++ compatibility).
+Make sure all of the text files are located in the correct directory.
+
 After completing the introductory steps (your name and character type) you will be presented with a menu that gives you six options:
 1. Fight
 2. Heal
