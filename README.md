@@ -32,7 +32,7 @@ This program requires three different text files to run:
 3. monsterNames.txt
 
 System Requirements:
-its c++ code, and computer with a proper compiler can run.
+its C++ code, and computer with a proper compiler can run. (Using C++ 11 Standards)
 I know for a fact that the files compile and run on Linux.
 
 Group Members:
